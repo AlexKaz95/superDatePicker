@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+}
+
+.option{
+    padding: 10px 15px;
+    background: #fff;
+    transition: .5s;
+    color: #333;
+}
+
+.option:hover{
+    cursor: pointer;
+    background: #d0e8ff;
+}
+
+.active{
+    background: #d0e8ff;
+}
+
+.selected{
+    border-bottom: 2px solid #ccc;
+    background: #fff;
+    padding: 10px 30px 10px 15px;
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    font-family: 'Roboto';
+    color: #333;
+}
+
+.opened{
+    border-bottom: 2px solid #007ef9;
+}
+
+.arrow{
+    position: absolute;
+    top: calc(50% - 10px);
+    right: 5px;
+}
+
+.optionsStyle{
+    width: 100%;
+    border-radius: 2px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    position: absolute;
+    min-width: 180px;
+    z-index: 2;
+}
+
+.selectorWrapper{
+    position: relative;
+}

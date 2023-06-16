@@ -1,0 +1,181 @@
+.calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.week{
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(7, 1fr);
+    color: #808080;
+}
+
+.week span{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 8px;
+}
+
+.day, .additionalDay{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 42px;
+  height: 42px;
+  cursor:pointer;
+  scale: 1;
+  transition: 0.1s;
+}
+
+.additionalDay{
+  color: gray;
+}
+
+.day:hover, .additionalDay:hover{
+  scale: 1.1;
+  font-weight: bold;
+}
+
+.activeDay {
+  background: rgb(62, 116, 251);
+  border-radius: 5px;
+  color: #fff;
+}
+
+.calendarTitle {
+  margin-top: 0;
+}
+
+.monthSelector {
+  margin-bottom: 10px;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.calendarDay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  border-radius: 2px;
+}
+
+.selectMonth{
+  display: flex;  
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  gap: 50px;
+  margin-bottom: 16px;
+}
+
+.selectMonth .year{
+  font-weight: 400;
+  color: gray;
+}
+
+.prev svg, .next svg{
+  height: 100%;
+}
+
+.prev, .next{
+  width: 24px;
+    height: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    padding: 4px; 
+}
+
+.prev path, .next path{
+    fill: #333;
+    transition: fill 0.5s ease-out;
+}
+
+.prev {
+    transform: rotate(180deg);
+}
+
+.prev:hover, .next:hover{
+  background: #c9c9c9;
+}
+
+.prev:hover path,
+.next:hover path {
+    fill: #000;
+}
+
+.hours{
+  display: block;
+  width: max-content;
+  color: #666;
+  font-family: 'Roboto';
+  letter-spacing: 1px;
+  margin-bottom 4px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor pointer
+
+  &:hover{
+    background: #ddd;  
+  }
+}
+
+.hoursActive{
+  background: #ddd;
+}
+
+.calendarWrapper{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.hoursPicker{
+  height: 310px;
+  overflow-y: scroll;
+  padding-right: 4px
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track  {
+    background-color: #ddd;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color gray
+  }
+
+}
+
+.month{}
+.year{}
+.next{}
+
+.title{
+  background: #ccc;
+  padding: 10px 20px;
+}
+
+.dateWrapper{
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+}
+
+.date{
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  flex-grow: 1;
+  padding: 10px 20px;
+}
