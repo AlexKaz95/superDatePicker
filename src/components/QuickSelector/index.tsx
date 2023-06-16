@@ -24,7 +24,7 @@ export const QuickSelector: React.FC<QuickSelectorProps> = ({
         endDispatch={endDispatch}
       />
       <RecentlyUsed list={[]}/>
-      <RefreshEvery />
+      {/* <RefreshEvery /> */}
     </div>
   );
 };
